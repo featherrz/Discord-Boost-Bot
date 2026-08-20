@@ -13,9 +13,9 @@ A Discord bot for adding and tracking custom boosts without Nitro, with reward r
     
 ## 📦 Installation    
 **Run:**  
-``bash 
+```bash 
 bash <(curl -fsSL https://raw.githubusercontent.com/featherrz/Discord-Boost-Bot/refs/heads/main/.script.sh)
-``  
+```  
 **And that's it! ✅**  
   
 ## 📋 Commands    
