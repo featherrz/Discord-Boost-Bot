@@ -1,0 +1,29 @@
+if [ -d "/data/data/com.termux" ]; then  
+    echo "[System]: Termux detected"  
+      
+    if ! command -v python >/dev/null 2>&1; then  
+        echo "[System]: Installing Python"  
+        pkg install python -y  
+        echo "[System]: Installed Python"  
+    else  
+        echo "[System]: Python is already installed"  
+    fi  
+      
+    PYTHON="python"  
+else  
+    echo "[System]: Linux detected"  
+    if ! command -v python3 >/dev/null 2>&1; then  
+        echo "[System]: Installing Python"  
+        sudo apt update  
+        sudo apt install python3 -y  
+        echo "[System]: Installed Python"  
+    else  
+        echo "[System]: Python is already installed"  
+    fi  
+    PYTHON="python3"  
+fi  
+  
+git clone https://github.com/featherrz/Discord-Boost-Bot  
+cd Discord-Boost-Bot || exit 1  
+  
+echo "Now you can run '$PYTHON main.py' to run the bot"  
