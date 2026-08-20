@@ -15,8 +15,7 @@ Features:
 
 Required Discord Developer Portal intents:
   - Server Members Intent
-
-Message Content Intent is NOT required because this version uses slash commands only.
+  - Message Content Intent
 ==========================================================================================
 """
 
@@ -34,8 +33,8 @@ from discord.ext import commands, tasks
 # Configuration
 # ------------------------------------------------------------------------------------
 
-if os.path.exists(".env"):
-    with open(".env", encoding="utf-8") as f:
+if os.path.exists(os.path.expanduser("~/Discord-Boost-Bot/.env")):
+    with open(os.path.expanduser("~/Discord-Boost-Bot/.env"), encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line and not line.startswith("#") and "=" in line:
