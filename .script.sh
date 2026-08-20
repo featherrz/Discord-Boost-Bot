@@ -141,6 +141,5 @@ fi
 echo
 echo "[System]: Installation complete! ✅"
 echo "[System]: Starting Boost Manager..."
+echo "[System]: Run '$PYTHON $DIR/main.py' to run the bot"
 echo
-
-"$PYTHON" main.py
