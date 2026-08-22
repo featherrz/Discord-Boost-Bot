@@ -31,9 +31,9 @@ env_path = os.path.join(project_dir, ".env")
 if not os.path.exists(env_path):
     print("Enter your Bot Token")
     token = input("> ").strip()
-
+    print("Enter your Bot name (Default: HenixBot)")
     bot_name = input(
-        ",> "
+        "> "
     ).strip() or "HenixBot"
 
     with open(env_path, "w") as f:
